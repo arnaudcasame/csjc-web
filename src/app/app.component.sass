@@ -36,12 +36,25 @@
 .nav-bar
   display: flex
   flex-direction: row
-  justify-content: flex-start
-  align-items: center
+  justify-content: space-between
   padding-left: 20px
   width: 100%
   height: 50px
   background-color: #FFFFFF
+  .nav-part-1
+    width: 100%
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    align-items: center
+  .nav-part-2
+    width: 100%
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    align-items: center
   .welcome
     font-size: 1.3em
     font-weight: bold
@@ -68,7 +81,8 @@
     .prompt
       width: 400px
   .ui.simple.language
-    margin-left: 20px
+    height: 100%
+    padding-left: 20px
   .notifications
     display: flex
     flex-direction: row
@@ -76,7 +90,9 @@
   .notifications > .button
     margin: 0 10px
   .ui.simple.profile
+    height: 100%
     margin: 0
+    padding: 0 10px
     border-style: none
   .nav-profile-holder
     display: flex
