@@ -24,6 +24,28 @@
       float: right
       &:hover
         cursor: pointer
+  .cust-list
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0
+    .item
+      padding: 13px
+      width: 100%
+      margin: 0
+      border-bottom: 1px solid rgba(255, 255, 255, .7)
+      cursor: pointer
+      &:hover
+        background-color: rgba(0, 0, 0, .3)
+        .content
+          color: #FDC500
+      .icon
+        color: #FDC500
+        font-size: .7em
+    .content
+      text-align: center
+      color: white
+      font-size: .9em
 
 .content-container
   margin: 0
