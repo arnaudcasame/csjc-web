@@ -88,6 +88,86 @@ export class DashboardComponent implements OnDestroy {
 
   date = new Date();
 
+  notices: any[] = [
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    },
+    {
+      text:
+        "Notice of Regular School Board Meeting – Monday, January 7, 2019 – 6:00 p.m., Administration Bldg.",
+      time: "16 May, 2017",
+      name: "Jennyfar Lopez",
+      ago: "5 min ago"
+    }
+  ];
+
   constructor(
     private themeService: NbThemeService,
     private solarService: SolarData,

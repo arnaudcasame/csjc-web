@@ -19,6 +19,16 @@
     // padding: 0;
   }
 
+  .list-card {
+    nb-card-header {
+      border-bottom: none;
+    }
+
+    nb-card-body {
+      padding: 0;
+    }
+  }
+
   // .calendars {
   //   display: flex;
   //   flex-wrap: wrap;
@@ -27,7 +37,7 @@
   // }
 
   .calendar-container {
-    // margin: 1rem 0rem;
+    margin: 0 0 1rem 0;
   }
 
   .subtitle {
@@ -59,11 +69,11 @@
 
   @include media-breakpoint-down(sm) {
     ngx-traffic {
-      display: none;
+      // display: none;
     }
 
     .card-container {
-      margin: 1rem 0;
+      margin: 1rem 0 0 0;
     }
   }
 }

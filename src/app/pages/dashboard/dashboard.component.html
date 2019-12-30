@@ -7,17 +7,30 @@
 </div>
 
 <div class="row">
-  <div class="col-xxxl-4 col-md-7 col-lg-5">
-    <div class="calendar-container">
-      <nb-calendar (dateChange)="dateChange($event)" [(date)]="date" size='large' [boundingMonth]="true" showWeekNumber>
-      </nb-calendar>
+  <div class="col-xxl-5">
+    <div class="row">
+      <div class="col-md-6">
+        <ngx-profit-card></ngx-profit-card>
+      </div>
+      <div class="col-md-6">
+        <ngx-earning-card></ngx-earning-card>
+      </div>
     </div>
+
+    <ngx-traffic-reveal-card></ngx-traffic-reveal-card>
   </div>
-  <div class="col-xxxl-8 col-md-5 col-lg-7">
+
+  <div class="col-xxl-7">
+    <ngx-ecommerce-charts></ngx-ecommerce-charts>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xxxl-12 col-md-12 col-lg-12">
     <div class="card-container">
       <nb-card>
         <nb-card-header>
-          Smart Table
+          Students
         </nb-card-header>
 
         <nb-card-body>
@@ -30,8 +43,45 @@
 </div>
 
 <div class="row">
+  <div class="col-md-12 col-lg-6 col-xxxl-6">
+    <nb-card class="list-card" size="small">
+      <nb-card-header>Notice Board</nb-card-header>
+      <nb-card-body>
+        <nb-list>
+          <nb-list-item *ngFor="let notice of notices">
+            <p>{{ notice.time }}</p>
+            <p><span>{{ notice.name }}</span> - <span>{{ notice.ago }}</span></p>
+            <p>{{ notice.text }}</p>
+          </nb-list-item>
+        </nb-list>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-12 col-lg-6 col-xxxl-6">
+    <nb-card class="list-card" size="small">
+      <nb-card-header>Recent Activities</nb-card-header>
+      <nb-card-body>
+        <nb-list>
+          <nb-list-item *ngFor="let notice of notices">
+            <p>{{ notice.time }}</p>
+            <p><span>{{ notice.name }}</span> - <span>{{ notice.ago }}</span></p>
+            <p>{{ notice.text }}</p>
+          </nb-list-item>
+        </nb-list>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+
+<div class="row">
   <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-    <ngx-temperature></ngx-temperature>
+    <!-- <ngx-temperature></ngx-temperature> -->
+    <div class="calendar-container">
+      <nb-calendar (dateChange)="dateChange($event)" [(date)]="date" [boundingMonth]="true" showWeekNumber>
+      </nb-calendar>
+    </div>
+    <ngx-traffic></ngx-traffic>
   </div>
 
   <div class="col-xxxl-9 col-xxl-8 col-lg-7 col-md-6">
@@ -50,7 +100,6 @@
 
   <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
     <ngx-solar [chartValue]="solarValue"></ngx-solar>
-
     <ngx-kitten></ngx-kitten>
   </div>
 
