@@ -3,6 +3,10 @@ import { NbThemeService } from "@nebular/theme";
 import { takeWhile } from "rxjs/operators";
 import { SolarData } from "../../@core/data/solar";
 
+import { LocalDataSource } from "ng2-smart-table";
+
+import { SmartTableData } from "../../@core/data/smart-table";
+
 interface CardSettings {
   title: string;
   iconClass: string;
@@ -63,28 +67,31 @@ export class DashboardComponent implements OnDestroy {
     cosmic: this.commonStatusCardsSet,
     corporate: [
       {
-        ...this.lightCard,
+        ...this.studentsCard,
         type: "warning"
       },
       {
-        ...this.rollerShadesCard,
+        ...this.parentsCard,
         type: "primary"
       },
       {
-        ...this.wirelessAudioCard,
+        ...this.teachersCard,
         type: "danger"
       },
       {
-        ...this.coffeeMakerCard,
+        ...this.earningsCard,
         type: "info"
       }
     ],
     dark: this.commonStatusCardsSet
   };
 
+  date = new Date();
+
   constructor(
     private themeService: NbThemeService,
-    private solarService: SolarData
+    private solarService: SolarData,
+    private service: SmartTableData
   ) {
     this.themeService
       .getJsTheme()
@@ -99,6 +106,65 @@ export class DashboardComponent implements OnDestroy {
       .subscribe(data => {
         this.solarValue = data;
       });
+
+    const data = this.service.getData();
+    this.source.load(data);
+  }
+
+  settings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>'
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>'
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true
+    },
+    columns: {
+      id: {
+        title: "ID",
+        type: "number"
+      },
+      firstName: {
+        title: "First Name",
+        type: "string"
+      },
+      lastName: {
+        title: "Last Name",
+        type: "string"
+      },
+      username: {
+        title: "Username",
+        type: "string"
+      },
+      email: {
+        title: "E-mail",
+        type: "string"
+      },
+      age: {
+        title: "Age",
+        type: "number"
+      }
+    }
+  };
+
+  source: LocalDataSource = new LocalDataSource();
+  onDeleteConfirm(event): void {
+    if (window.confirm("Are you sure you want to delete?")) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  dateChange(event): void {
+    console.log(event);
   }
 
   ngOnDestroy() {

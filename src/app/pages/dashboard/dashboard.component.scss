@@ -8,9 +8,62 @@
     padding-bottom: 0;
   }
 
+  .test {
+    background-color: greenyellow;
+    margin: 1rem 0;
+
+    p {
+      background-color: indianred;
+    }
+
+    // padding: 0;
+  }
+
+  // .calendars {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   margin: -1rem -0.5rem;
+  //   justify-content: center;
+  // }
+
+  .calendar-container {
+    // margin: 1rem 0rem;
+  }
+
+  .subtitle {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    // .calendars {
+    //   justify-content: flex-start;
+    // }
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    // .calendars {
+    //   margin: -1.1rem;
+    // }
+    // .calendar-container {
+    //   margin: 1rem 0rem;
+    // }
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    // .calendars {
+    //   margin: -1rem;
+    // }
+  }
+
   @include media-breakpoint-down(sm) {
     ngx-traffic {
       display: none;
+    }
+
+    .card-container {
+      margin: 1rem 0;
     }
   }
 }

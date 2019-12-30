@@ -7,6 +7,29 @@
 </div>
 
 <div class="row">
+  <div class="col-xxxl-4 col-md-7 col-lg-5">
+    <div class="calendar-container">
+      <nb-calendar (dateChange)="dateChange($event)" [(date)]="date" size='large' [boundingMonth]="true" showWeekNumber>
+      </nb-calendar>
+    </div>
+  </div>
+  <div class="col-xxxl-8 col-md-5 col-lg-7">
+    <div class="card-container">
+      <nb-card>
+        <nb-card-header>
+          Smart Table
+        </nb-card-header>
+
+        <nb-card-body>
+          <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+          </ng2-smart-table>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
     <ngx-temperature></ngx-temperature>
   </div>
