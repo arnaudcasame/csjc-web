@@ -37,7 +37,7 @@
   // }
 
   .calendar-container {
-    margin: 0 0 1rem 0;
+    margin: 0 1rem 1rem 0;
   }
 
   .subtitle {
@@ -62,8 +62,32 @@
   }
 
   @include media-breakpoint-up(xxxl) {
+
     // .calendars {
     //   margin: -1rem;
+    // }
+    // .calendar-container {
+    //   margin: 1rem 1rem 1rem 0;
+    // }
+  }
+
+  @include media-breakpoint-up(xxl) {
+
+    // .calendars {
+    //   margin: -1rem;
+    // }
+    // .calendar-container {
+    //   margin: 1rem 1rem 1rem 0;
+    // }
+  }
+
+  @include media-breakpoint-up(xl) {
+
+    // .calendars {
+    //   margin: -1rem;
+    // }
+    // .calendar-container {
+    //   margin: 1rem 1rem 1rem 0;
     // }
   }
 
